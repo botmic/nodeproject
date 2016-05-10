@@ -14,6 +14,7 @@ app.get('/', function(req, res) {
 app.get('/routing', function(req, res) {
     res.send('Hello world routing');
 });
+
 app.listen(port, function(err) {
     console.log('Server is running on port: ' + port);
 });
