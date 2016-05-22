@@ -3,6 +3,7 @@ var app = express();
 
 var port = process.env.PORT;
 var eventRouter = require('./src/routes/eventRoutes');
+var dbRouter = require('./src/routes/dbRoutes');
 
 app.use(express.static('public'));
 
@@ -12,6 +13,7 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.use('/Events', eventRouter);
+app.use('/Db', dbRouter);
 
 app.get('/', function(req, res) {
     res.render('index', { 
